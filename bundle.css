@@ -1,15 +1,42 @@
+@font-face {
+  font-family: "Stellar";
+  src: url("fonts/Stellar-Medium.otf") format("opentype"); }
+
+@font-face {
+  font-family: "FiraSans";
+  src: url("fonts/FiraSans-Regular.ttf") format("truetype"); }
+
 .accordion {
-  color: #eeff04; }
+  width: 620px;
+  height: 505px;
+  border: 1px solid black; }
 
 .accordion__header {
   font-size: 26px;
-  font-family: "FiraSans";
+  font-family: "Stellar";
   line-height: 2.667; }
 
 .accordion__content {
   font-size: 18.561px;
   font-family: "FiraSans";
   line-height: 2.667; }
+
+.container {
+  margin: 227px auto 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.container__item {
+  margin: 0 13px; }
+
+.menu {
+  width: 188px;
+  height: 230px;
+  border: 1px solid black;
+  font-family: "Stellar";
+  font-size: 6.255px;
+  line-height: 5.755; }
 
 .text {
   font-size: 26px;
