@@ -1,18 +1,29 @@
 const gulp = require('gulp')
   sass = require('gulp-sass')
-  concat = require('gul-concat');
+  concat = require('gulp-concat')
+  browserSync = require('browser-sync').create();
 
 gulp.task('hey', function() {
   console.log('hey');
 });
 
+gulp.task('browser-sync', function() {
+  browserSync.init({
+    server: {
+      baseDir: './'
+    }
+  });
+})
+
 gulp.task('sass', function() {
   return gulp.src('scss/*.scss')
-    .pipe(concat())
-    // .pipe(sass())
+    .pipe(concat('bundle.scss', {newLine: '\r\r'}))
+    .pipe(sass())
     .pipe(gulp.dest(''))
+    .pipe(browserSync.stream());
 });
 
-gulp.task('watch', function() {
-  gulp.watch('*.scss', ['sass']);
+gulp.task('watch', ['browser-sync'], function() {
+  gulp.watch('scss/*.scss', ['sass']);
+  gulp.watch('*.html').on('change', browserSync.reload);
 })

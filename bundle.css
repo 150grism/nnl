@@ -1,9 +1,5 @@
-.text {
-  font-size: 26px;
-  font-family: "Stellar"; }
-
 .accordion {
-  color: #000100; }
+  color: #eeff04; }
 
 .accordion__header {
   font-size: 26px;
@@ -14,3 +10,7 @@
   font-size: 18.561px;
   font-family: "FiraSans";
   line-height: 2.667; }
+
+.text {
+  font-size: 26px;
+  font-family: "Stellar"; }
