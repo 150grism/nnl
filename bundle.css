@@ -35,8 +35,20 @@
   height: 230px;
   border: 1px solid black;
   font-family: "Stellar";
-  font-size: 6.255px;
-  line-height: 5.755; }
+  font-size: 18px;
+  line-height: 35px; }
+
+.menu__list {
+  padding-left: 30px; }
+
+.menu__item {
+  line-height: 21px;
+  margin: 23px 0;
+  padding-left: 18px;
+  text-indent: -2px; }
+
+.menu__item_active {
+  padding-left: 13px; }
 
 .text {
   font-size: 26px;
