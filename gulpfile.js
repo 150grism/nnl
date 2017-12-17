@@ -1,9 +1,11 @@
 const gulp = require('gulp')
   sass = require('gulp-sass')
   concat = require('gulp-concat')
-  browserSync = require('browser-sync').create();
+  browserSync = require('browser-sync').create()
+  sourcemaps = require('gulp-sourcemaps');
+  
 
-gulp.task('hey', function() {
+gulp.task('hey', ['sass'], function() {
   console.log('hey');
 });
 
@@ -16,10 +18,12 @@ gulp.task('browser-sync', function() {
 })
 
 gulp.task('sass', function() {
-  return gulp.src('scss/*.scss')
+  return gulp.src('./scss/*.scss')
+    .pipe(sourcemaps.init())
     .pipe(concat('bundle.scss', {newLine: '\r\r'}))
     .pipe(sass())
-    .pipe(gulp.dest(''))
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest('./'))
     .pipe(browserSync.stream());
 });
 
