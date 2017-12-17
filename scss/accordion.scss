@@ -2,17 +2,25 @@
   width: 620px;
   height: 505px;
   border: 1px solid black;
-  padding-left: 37px;
 }
 
 .accordion__header {
   font-size: 18px;
   font-family: "Stellar";
   line-height: 20px;
+  padding: 15px 0;
+  border: 1px solid black;
 }
 
 .accordion__content {
   font-size: 18px;
   font-family: "FiraSans";
   line-height: 20px;
+  padding: 15px 0;
+  border: 1px solid black;
+}
+
+.accordion__text {
+  margin: 0;
+  padding-left: 40px;
 }
