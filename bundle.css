@@ -8,7 +8,6 @@
 
 .accordion {
   width: 620px;
-  height: 505px;
   border: 1px solid black; }
 
 .accordion__header {
@@ -19,14 +18,21 @@
   border: 1px solid black; }
 
 .accordion__content {
+  width: inherit;
+  height: 0;
   font-size: 18px;
   font-family: "FiraSans";
   line-height: 20px;
-  padding: 15px 0;
-  border: 1px solid black; }
+  padding: 0;
+  transition: all 0.45s ease-in-out;
+  overflow: hidden; }
+
+.accordion__content_visible {
+  padding: 15px 0; }
 
 .accordion__text {
   margin: 0;
+  padding: 15px 0;
   padding-left: 40px; }
 
 .container {
