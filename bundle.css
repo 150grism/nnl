@@ -10,7 +10,7 @@
   width: 620px;
   border: 1px solid transparent;
   border-radius: 5px;
-  border-left: 5px solid green;
+  border-left: 5px solid #179c94;
   box-shadow: 0px 0px 8.97px 4.03px rgba(31, 44, 96, 0.13); }
 
 .accordion__header {
@@ -60,7 +60,8 @@
 
 .accordion__thumbs {
   margin: 17px 0 13px;
-  margin-left: 15px; }
+  margin-left: 15px;
+  cursor: pointer; }
   .accordion__thumbs:first-of-type {
     margin-left: 40px; }
 
@@ -76,27 +77,38 @@
 .menu {
   width: 188px;
   height: 230px;
-  border: 1px solid black;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: 0px 0px 8.97px 4.03px rgba(31, 44, 96, 0.13);
   font-family: "Stellar";
   font-size: 18px;
   line-height: 35px;
+  padding: 11.5px 0;
   counter-reset: c-counter; }
 
 .menu__item {
   display: flex;
   flex-direction: row;
-  line-height: 21px;
-  margin: 23px 0;
-  text-indent: -2px; }
+  line-height: 23px;
+  padding: 11.5px 0;
+  text-indent: -2px;
+  cursor: pointer; }
   .menu__item:before {
     display: block;
     content: counter(c-counter) ".";
     counter-increment: c-counter;
     padding-right: 18px;
-    padding-left: 13px; }
+    padding-left: 18px;
+    padding-bottom: 2px; }
+  .menu__item:hover {
+    color: #179c94; }
 
 .menu__item_active {
-  padding-right: 13px; }
+  color: #179c94; }
+  .menu__item_active:before {
+    padding-right: 13px;
+    padding-left: 13px;
+    border-left: 5px solid #179c94; }
 
 .text {
   font-size: 26px;

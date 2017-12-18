@@ -3,7 +3,7 @@
   // height: 505px;
   border: 1px solid transparent;
   border-radius: 5px;
-  border-left: 5px solid green;
+  border-left: 5px solid rgb(23, 156, 148);
   box-shadow: 0px 0px 8.97px 4.03px rgba(31, 44, 96, 0.13);
 }
 
@@ -81,6 +81,7 @@
 .accordion__thumbs {
   margin: 17px 0 13px;
   margin-left: 15px;
+  cursor: pointer;
   &:first-of-type {
     margin-left: 40px;
   }
