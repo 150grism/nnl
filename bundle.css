@@ -7,10 +7,10 @@
   src: url("fonts/FiraSans-Regular.ttf") format("truetype"); }
 
 .accordion {
-  width: 620px;
+  width: 630px;
+  height: 100%;
   border: 1px solid rgba(31, 44, 96, 0.13);
   border-radius: 5px;
-  border-left: 5px solid #179c94;
   box-shadow: 0px 0px 8.97px 4.03px rgba(31, 44, 96, 0.13); }
 
 .accordion__header {
@@ -19,49 +19,69 @@
   font-size: 18px;
   font-family: "Stellar";
   padding: 4px 0 5px;
-  border-bottom: 1px solid rgba(28, 31, 55, 0.302);
+  border-top: 1px solid rgba(28, 31, 55, 0.18);
   cursor: pointer; }
   .accordion__header:hover {
     background: #ececec; }
   .accordion__header:first-of-type {
     border-top: none; }
-  .accordion__header:last-of-type {
-    border-top: none; }
 
 .accordion__content {
-  width: inherit;
   height: 0;
-  transition: all 0.4s ease-in-out;
-  overflow: hidden; }
+  transition: all 0.4s ease-in-out, border 0s;
+  overflow: hidden;
+  border-left: 5px solid #179c94 !important; }
+  .accordion__content .accordion__text {
+    padding-left: 35px; }
 
 .accordion__body {
   font-size: 18px;
   font-family: "FiraSans";
   line-height: 29px;
-  padding: 15px 0;
+  padding: 10px 0;
+  transition: border 0.4s;
   overflow: hidden;
-  border-top: 1px solid rgba(28, 31, 55, 0.302); }
+  border-top: 1px solid rgba(28, 31, 55, 0.12); }
 
 .accordion__footer {
   display: flex;
   font-size: 13px;
   font-family: "Stellar";
   background: #f8f8f8;
-  border-bottom: 1px solid rgba(28, 31, 55, 0.302); }
+  border-bottom: 1px solid rgba(28, 31, 55, 0.12); }
+  .accordion__footer .accordion__text {
+    color: rgba(24, 12, 69, 0.702); }
+
+.accordion__active {
+  border-left: 5px solid #179c94; }
+  .accordion__active.accordion__first-element {
+    border-top-left-radius: 5px; }
+  .accordion__active.accordion__last-element {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; }
+  .accordion__active .accordion__text {
+    padding-left: 35px; }
+  .accordion__active.accordion__header {
+    border-bottom: none; }
+  .accordion__active > .accordion__body {
+    border-top: 2px solid rgba(28, 31, 55, 0.13); }
 
 .accordion__text {
+  color: #180c45;
   margin: 0;
   padding: 15px 0;
   padding-left: 40px; }
 
 .accordion__chevron {
   margin: 18px 30px 12px 0;
+  font-size: 18px !important;
   transition: all 0.4s; }
 
 .accordion__thumbs {
-  margin: 17px 0 13px;
+  margin: 12px 0 10px;
   margin-left: 15px;
-  cursor: pointer; }
+  cursor: pointer;
+  color: rgba(24, 12, 69, 0.702); }
   .accordion__thumbs:first-of-type {
     margin-left: 40px; }
 
@@ -76,7 +96,8 @@ body {
   justify-content: center; }
 
 .container__item {
-  margin: 0 13px; }
+  margin: 0 13px;
+  flex-shrink: 1; }
 
 .menu {
   width: 175px;
@@ -87,12 +108,13 @@ body {
   font-family: "Stellar";
   font-size: 18px;
   line-height: 35px;
-  padding: 15px 0;
+  padding: 10px 0;
   counter-reset: c-counter; }
 
 .menu__item {
   display: flex;
   position: relative;
+  color: #1c1f37;
   flex-direction: row;
   line-height: 23px;
   padding: 10px 0;
