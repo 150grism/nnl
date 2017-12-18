@@ -5,6 +5,8 @@
 }
 
 .accordion__header {
+  display: flex;
+  justify-content: space-between;
   font-size: 18px;
   font-family: "Stellar";
   line-height: 20px;
@@ -19,7 +21,7 @@
   font-family: "FiraSans";
   line-height: 20px;
   padding: 0;
-  transition: all 0.45s ease-in-out;
+  transition: all 0.4s ease-in-out;
   overflow: hidden;
   // border: 1px solid black;
 }
@@ -33,4 +35,10 @@
   margin: 0;
   padding: 15px 0;
   padding-left: 40px;
+}
+
+.accordion__icon {
+  margin: 15px 0;
+  margin-right: 40px;
+  transition: all 0.4s;
 }
