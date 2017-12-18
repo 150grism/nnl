@@ -1,7 +1,9 @@
 .accordion {
   width: 620px;
   // height: 505px;
-  border: 1px solid black;
+  border: 2px solid grey;
+  border-radius: 5px;
+  border-left-color: green;
 }
 
 .accordion__header {
@@ -11,24 +13,42 @@
   font-family: "Stellar";
   line-height: 20px;
   padding: 15px 0;
-  border: 1px solid black;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  cursor: pointer;
 }
 
 .accordion__content {
   width: inherit;
   height: 0;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+.accordion__body {
+  // width: inherit;
+  // height: 0;
   font-size: 18px;
   font-family: "FiraSans";
   line-height: 20px;
-  padding: 0;
-  transition: all 0.4s ease-in-out;
+  // padding: 0;
+  padding: 15px 0;
+  // transition: all 0.4s ease-in-out;
   overflow: hidden;
   // border: 1px solid black;
 }
 
+.accordion__footer {
+  display: flex;
+  font-size: 13px;
+  font-family: "Stellar";
+  // line-height: 15px;
+  background: rgb(221, 221, 221);
+}
+
 .accordion__content_visible {
   // max-height: 200px;
-  padding: 15px 0;
+  // padding: 15px 0;
 }
 
 .accordion__text {
@@ -37,8 +57,17 @@
   padding-left: 40px;
 }
 
-.accordion__icon {
+.accordion__chevron {
   margin: 15px 0;
   margin-right: 40px;
+  transform: translateY(5px);
   transition: all 0.4s;
+}
+
+.accordion__thumbs {
+  margin: 17px 0 13px;
+  margin-left: 15px;
+  &:first-of-type {
+    margin-left: 40px;
+  }
 }

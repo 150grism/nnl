@@ -8,7 +8,9 @@
 
 .accordion {
   width: 620px;
-  border: 1px solid black; }
+  border: 2px solid grey;
+  border-radius: 5px;
+  border-left-color: green; }
 
 .accordion__header {
   display: flex;
@@ -17,30 +19,45 @@
   font-family: "Stellar";
   line-height: 20px;
   padding: 15px 0;
-  border: 1px solid black; }
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  cursor: pointer; }
 
 .accordion__content {
   width: inherit;
   height: 0;
-  font-size: 18px;
-  font-family: "FiraSans";
-  line-height: 20px;
-  padding: 0;
   transition: all 0.4s ease-in-out;
   overflow: hidden; }
 
-.accordion__content_visible {
-  padding: 15px 0; }
+.accordion__body {
+  font-size: 18px;
+  font-family: "FiraSans";
+  line-height: 20px;
+  padding: 15px 0;
+  overflow: hidden; }
+
+.accordion__footer {
+  display: flex;
+  font-size: 13px;
+  font-family: "Stellar";
+  background: #dddddd; }
 
 .accordion__text {
   margin: 0;
   padding: 15px 0;
   padding-left: 40px; }
 
-.accordion__icon {
+.accordion__chevron {
   margin: 15px 0;
   margin-right: 40px;
+  transform: translateY(5px);
   transition: all 0.4s; }
+
+.accordion__thumbs {
+  margin: 17px 0 13px;
+  margin-left: 15px; }
+  .accordion__thumbs:first-of-type {
+    margin-left: 40px; }
 
 .container {
   margin: 227px auto 0;
