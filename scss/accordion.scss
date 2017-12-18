@@ -11,16 +11,17 @@
   justify-content: space-between;
   font-size: 18px;
   font-family: "Stellar";
-  // line-height: 20px;
   padding: 4px 0 5px;
-  // border-top: 1px solid rgba(28, 31, 55, 0.302);
-  border-top: 1px solid rgba(28, 31, 55, 0.18);
+  border-top: 1px solid rgba(28, 31, 55, 0.2);
   cursor: pointer;
   &:hover {
     background: rgb(236, 236, 236);
   }
   &:first-of-type {
     border-top: none;
+  }
+  & .accordion__text {
+    padding-left: 40px;
   }
 }
 
@@ -35,16 +36,12 @@
 }
 
 .accordion__body {
-  // width: inherit;
-  // height: 0;
   font-size: 18px;
   font-family: "FiraSans";
   line-height: 29px;
-  // padding: 0;
   padding: 10px 0;
   transition: border 0.4s;
   overflow: hidden;
-  // border: 1px solid black;
   border-top: 1px solid rgba(28, 31, 55, 0.12);
 }
 
@@ -52,7 +49,6 @@
   display: flex;
   font-size: 13px;
   font-family: "Stellar";
-  // line-height: 15px;
   background: rgb(248, 248, 248);
   & .accordion__text {
     color: rgba(24, 12, 69, 0.702);
@@ -85,14 +81,12 @@
   color: rgb(24, 12, 69);
   margin: 0;
   padding: 15px 0;
-  padding-left: 40px;
+  // padding-left: 40px;
 }
 
 .accordion__chevron {
-  // margin: 15px 0 ;
   margin: 18px 30px 12px 0;
   font-size: 18px !important;
-  // transform: translateY(5px);
   transition: all 0.4s;
 }
 
