@@ -8,7 +8,7 @@
 
 .accordion {
   width: 620px;
-  border: 1px solid transparent;
+  border: 1px solid rgba(31, 44, 96, 0.13);
   border-radius: 5px;
   border-left: 5px solid #179c94;
   box-shadow: 0px 0px 8.97px 4.03px rgba(31, 44, 96, 0.13); }
@@ -18,7 +18,7 @@
   justify-content: space-between;
   font-size: 18px;
   font-family: "Stellar";
-  padding: 15px 0;
+  padding: 4px 0 5px;
   border-bottom: 1px solid rgba(28, 31, 55, 0.302);
   cursor: pointer; }
   .accordion__header:hover {
@@ -37,6 +37,7 @@
 .accordion__body {
   font-size: 18px;
   font-family: "FiraSans";
+  line-height: 29px;
   padding: 15px 0;
   overflow: hidden;
   border-top: 1px solid rgba(28, 31, 55, 0.302); }
@@ -54,8 +55,7 @@
   padding-left: 40px; }
 
 .accordion__chevron {
-  margin: 20px 0 10px;
-  margin-right: 40px;
+  margin: 18px 30px 12px 0;
   transition: all 0.4s; }
 
 .accordion__thumbs {
@@ -64,6 +64,10 @@
   cursor: pointer; }
   .accordion__thumbs:first-of-type {
     margin-left: 40px; }
+
+body {
+  margin: 0;
+  padding: 0; }
 
 .container {
   margin: 227px auto 0;
@@ -75,40 +79,51 @@
   margin: 0 13px; }
 
 .menu {
-  width: 188px;
-  height: 230px;
+  width: 175px;
+  height: 205px;
   border: 1px solid transparent;
   border-radius: 5px;
   box-shadow: 0px 0px 8.97px 4.03px rgba(31, 44, 96, 0.13);
   font-family: "Stellar";
   font-size: 18px;
   line-height: 35px;
-  padding: 11.5px 0;
+  padding: 15px 0;
   counter-reset: c-counter; }
 
 .menu__item {
   display: flex;
+  position: relative;
   flex-direction: row;
   line-height: 23px;
-  padding: 11.5px 0;
+  padding: 10px 0;
   text-indent: -2px;
-  cursor: pointer; }
+  cursor: pointer;
+  padding-left: 50px; }
   .menu__item:before {
+    position: absolute;
     display: block;
+    box-sizing: border-box;
+    width: 50px;
+    height: inherit;
+    left: -1px;
     content: counter(c-counter) ".";
     counter-increment: c-counter;
-    padding-right: 18px;
-    padding-left: 18px;
-    padding-bottom: 2px; }
+    text-align: center;
+    padding: 0 auto; }
   .menu__item:hover {
     color: #179c94; }
 
 .menu__item_active {
-  color: #179c94; }
-  .menu__item_active:before {
-    padding-right: 13px;
-    padding-left: 13px;
-    border-left: 5px solid #179c94; }
+  color: #179c94;
+  padding-left: 44px; }
+  .menu__item_active:after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 23px;
+    left: -1px;
+    top: 11px;
+    background: #179c94; }
 
 .text {
   font-size: 26px;
