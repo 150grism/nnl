@@ -5,19 +5,25 @@
   font-family: "Stellar";
   font-size: 18px;
   line-height: 35px;
-}
 
-.menu__list {
-  padding-left: 30px;
+  counter-reset: c-counter;  
 }
 
 .menu__item {
+  display: flex;
+  flex-direction: row;
   line-height: 21px;
   margin: 23px 0;
-  padding-left: 18px;
   text-indent: -2px;
+  &:before {
+    display: block;
+    content: counter(c-counter)'.'; 
+    counter-increment: c-counter;
+    padding-right: 18px;
+    padding-left: 13px;
+  }
 }
 
 .menu__item_active {
-  padding-left: 13px;
+  padding-right: 13px;
 }
