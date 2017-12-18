@@ -8,16 +8,48 @@
 }
 
 .menu__list {
+  display: flex;
+  flex-direction: column;
   padding-left: 30px;
+  list-style: none; 
+  counter-reset: li;
 }
 
 .menu__item {
-  line-height: 21px;
-  margin: 23px 0;
-  padding-left: 18px;
+  display: flex;
+  flex-direction: row;
+  line-height: 21 px;
+  // padding-left: 18px;
   text-indent: -2px;
+  counter-increment: li;
+  &:before {
+    content: counter(li);
+    display: block; 
+    margin-right: 18px;
+    &:hover {
+      color: rgb(23, 156, 148);
+    }
+  }
+  & > label {
+    display: block;
+    &:hover {
+      color: rgb(23, 156, 148);
+    }
+    padding: 12px 0;
+    text-indent: inherit;
+    & > input {
+      display: none;
+    }    
+  }
 }
 
 .menu__item_active {
-  padding-left: 13px;
+  // padding-left: 13px;
+  & > label {
+    color: rgb(23, 156, 148);
+  }
+  &:before {
+    margin-right: 13px;
+    color: rgb(23, 156, 148);
+  }
 }
